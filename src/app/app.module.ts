@@ -19,7 +19,6 @@ import { HttpClientModule } from '@angular/common/http';
     UserDetailComponent,
     AppHighlightDirective,
     SearchComponent,
- 
     SearchFormComponent
   ],
   imports: [

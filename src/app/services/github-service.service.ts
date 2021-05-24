@@ -44,7 +44,7 @@ export class GithubService {
   }
 
   searchRepos(term: string) {
-    let endpoint = `https://api.github.com/search/repositories?access_=${environment.apiKey}&q=${term}&per_page=4`
+    let endpoint = `https://api.github.com/search/repositories?access_=${environment.apiKey}&q=${term}&per_page=5`
     // let endpoint = "https://api.github.com/search/users?access_token="+environment.apiKey + "&q=" + term;
     let promise = new Promise<void>((resolve, reject) => {
       this.client

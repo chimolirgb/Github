@@ -3,3 +3,8 @@ img{
     width: 100px;
     object-fit: cover;
 }
+h2{
+    text-align: center;
+    color: #000;
+}
+

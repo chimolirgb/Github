@@ -1,7 +1,7 @@
 <form class="form-inline">
     <div class="form-group">
         <label for="term"></label>
-        <input type="text" id="term" [(ngModel)]="searchTerm" name="term" #term="ngModel" class="form-control mx-sm-3">
+        <input type="text" id="term" [(ngModel)]="searchTerm" name="term" #term="ngModel" placeholder="Enter User Name" class="form-control mx-sm-3">
         <button class="btn btn-primary" (click)="passSearchTerm()">Search</button>
         <br>
 

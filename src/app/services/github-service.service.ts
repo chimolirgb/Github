@@ -14,8 +14,8 @@ export class GithubService {
   reposFound: Repository[] = [];
 
   searchUsers(term: string) {
-    let endpoint = `https://api.github.com/search/users?access_token=${environment.apiKey}&q=${term}&per_page=10`
-    // let endpoint = "https://api.github.com/search/users?access_token="+environment.apiKey + "&q=" + term;
+     let endpoint = `https://api.github.com/search/users?access_token=${environment.apiKey}&q=${term}&per_page=10`;
+    //  let endpoint = "https://api.github.com/search/users?access_token="+environment.apiKey + "&q=" + term;
 
 
     let promise = new Promise<void>((resolve, reject) => {

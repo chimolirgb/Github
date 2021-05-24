@@ -1,6 +1,15 @@
 # Github
 
+# Author
+Lucy Chimoli
+
+# Description
+This is an Angular CLI application to create a website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+
+# Technologies Used
+Angular CLI
+Git
 
 ## Development server
 
@@ -25,3 +34,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# License
+MIT License:
+Copyright (c) 2021 Chimoli Lucy.

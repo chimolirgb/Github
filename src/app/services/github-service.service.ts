@@ -14,9 +14,9 @@ export class GithubService {
   reposFound: Repository[] = [];
 
   searchUsers(term: string) {
-     let endpoint = `https://api.github.com/search/users?access_token=${environment.apiKey}&q=${term}&per_page=10`;
+   
+    let endpoint = `https://api.github.com/search/users?access_=${environment.apiKey}&q=${term}&per_page=7`;
     //  let endpoint = "https://api.github.com/search/users?access_token="+environment.apiKey + "&q=" + term;
-
 
     let promise = new Promise<void>((resolve, reject) => {
       this.client
@@ -25,6 +25,7 @@ export class GithubService {
         .then(
           (results: any) => {
             this.usersFound = [];
+            console.log('results');
             for (let i = 0; i < results['items'].length; i++) {
               let name = results['items'][i]['login'];
               let imagePath = results['items'][i]['avatar_url'];
@@ -43,7 +44,7 @@ export class GithubService {
   }
 
   searchRepos(term: string) {
-    let endpoint = `https://api.github.com/search/repositories?access_token=${environment.apiKey}&q=${term}&per_page=7`
+    let endpoint = `https://api.github.com/search/repositories?access_=${environment.apiKey}&q=${term}&per_page=4`
     // let endpoint = "https://api.github.com/search/users?access_token="+environment.apiKey + "&q=" + term;
     let promise = new Promise<void>((resolve, reject) => {
       this.client

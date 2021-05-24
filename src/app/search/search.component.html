@@ -1,39 +1,45 @@
 <br>
+<br>
 <div class="container">
-    <app-search-form (passTerm)="search($event)"></app-search-form>
-    <br>
-    <div class="row">
-        <div class="col-md-6">
-            <div>
-                <div *ngFor="let user of users; let i = index">
+  <app-search-form (passTerm)="search($event)"></app-search-form>
+  <br>
+  <div class="row">
+    <div class="col-md-6">
+      <div>
+        <h3>USER NAMES</h3>
+        <div *ngFor="let user of users; let i = index">
+
+         
+          <br>
+          <p>{{ user.userName }}
+          </p>
+          <img src="{{ user.profileImage }}" alt="">
 
 
-                    <p>{{ user.userName }}
-                    </p>
-                    <img src="{{ user.profileImage }}" alt="">
 
-
-
-                </div>
-            </div>
         </div>
-        <div class="col-md-6">
-            <div>
-                <div *ngFor="let repo of repos; let i = index">
-
-
-                    <p>{{ repo.repoName }}
-                    </p>
-                    <img src="{{ repo.userImage }}" alt="">
-                    <br>
-                    <br>
-                    <a href="{{ repo.repoUrl }}"><button class="btn btn-primary">Link</button></a>
-                    <br>
-
-
-
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="col-md-6">
+      <div>
+        <h3>REPOSITORIES</h3>
+        <div *ngFor="let repo of repos; let i = index">
+        
+          <br>
+
+          <p>{{ repo.repoName }}
+          </p>
+          <img src="{{ repo.userImage }}" alt="">
+          <br>
+          <br>
+
+          <a href="{{ repo.repoUrl }}"><button class="btn btn-primary">Link</button></a>
+          <br>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
